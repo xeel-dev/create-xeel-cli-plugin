@@ -5,6 +5,10 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xeel-dev/create-xeel-cli-plugin.git"
+  },
   "scripts": {
     "create": "node bin/create-xeel-cli-plugin.js",
     "prebuild": "shx rm -rf dist",
