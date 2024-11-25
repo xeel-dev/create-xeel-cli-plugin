@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/xeel-dev/create-xeel-cli-plugin/compare/v1.0.2...v1.0.3) (2024-11-25)
+
+
+### Bug Fixes
+
+* adds bin entry for the init script ([9c64572](https://github.com/xeel-dev/create-xeel-cli-plugin/commit/9c6457258cd415f953df55aeb3f039236fa2cc3c))
+
 ## [1.0.2](https://github.com/xeel-dev/create-xeel-cli-plugin/compare/v1.0.1...v1.0.2) (2024-11-25)
 
 
