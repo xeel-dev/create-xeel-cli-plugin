@@ -9,6 +9,9 @@
     "type": "git",
     "url": "git+https://github.com/xeel-dev/create-xeel-cli-plugin.git"
   },
+  "bin": {
+    "create-xeel-cli-plugin": "./bin/create-xeel-cli-plugin.js"
+  },
   "scripts": {
     "create": "node bin/create-xeel-cli-plugin.js",
     "prebuild": "shx rm -rf dist",
