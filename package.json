@@ -1,0 +1,50 @@
+{
+  "name": "create-xeel-cli-plugin",
+  "version": "1.0.0",
+  "description": "A boilerplate for creating a Xeel CLI plugin",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "create": "node bin/create-xeel-cli-plugin.js",
+    "prebuild": "shx rm -rf dist",
+    "build": "tsc -b",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "prepack": "oclif manifest",
+    "prepare": "husky"
+  },
+  "author": "felix@xeel.dev",
+  "license": "MIT",
+  "packageManager": "pnpm@9.14.2",
+  "dependencies": {
+    "@oclif/core": "^4"
+  },
+  "devDependencies": {
+    "@oclif/prettier-config": "^0.2.1",
+    "@types/node": "20",
+    "@xeel-dev/cli": "^1.0.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.3.3",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "shx": "^0.3.4",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "oclif": {
+    "bin": "xeel-example-plugin",
+    "dirname": "create-xeel-cli-plugin",
+    "commands": "./dist/commands",
+    "hooks": {
+      "register-ecosystem": "./dist/hooks/register-ecosystem.js"
+    },
+    "topicSeparator": " "
+  }
+}
