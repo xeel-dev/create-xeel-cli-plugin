@@ -1,0 +1,26 @@
+name: Report to Xeel
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '3 13 * * *'
+permissions:
+  id-token: write # Required to authenticate with Xeel using OIDC
+  contents: read
+jobs:
+  dependency-debt:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install
+      - uses: xeel-dev/report-action@v1
+        with:
+          xeel-organization: 'x::org:64jlQszyh97h4u4d0IGc7J'
+        env:
+          XEEL_API: 'https://api.xeel-dev.com' # Use the development API
+          XEEL_APP: 'https://app.xeel-dev.com' # Use the development APP
