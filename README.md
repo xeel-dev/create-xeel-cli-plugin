@@ -39,5 +39,6 @@ pnpm install
 ```
 4.	Start building your plugin by editing the example ecosystem support in `src/ecosystem.ts`
 
+5. Link your local plugin to the Xeel CLI using `npx xeel plugins link ./my-plugin`; see https://github.com/oclif/plugin-plugins?tab=readme-ov-file#mycli-plugins-link-path
 
-
+6. You can now test your plugin using the Xeel CLI. 🚀
