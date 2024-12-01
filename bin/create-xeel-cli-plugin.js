@@ -15,6 +15,12 @@ execSync(`git clone https://github.com/xeel-dev/create-xeel-cli-plugin.git ${tar
 const packageJsonPath = path.join(targetDir, 'package.json');
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
 packageJson.name = packageName;
+delete packageJson.repository;
+delete packageJson.author;
+delete packageJson.bugs;
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+
+// Unset the git remote
+execSync(`cd ${targetDir} && git remote remove origin`);
 
 console.log(`Plugin scaffolded in ${targetDir}`);

@@ -16,4 +16,7 @@ export default class ExampleEcosystemSupport implements EcosystemSupport<typeof 
     async listOutdatedDependencies(project: ExampleProject): Promise<ExampleDependency[]> {
         return []; // TODO
     }
+    async countDependencies(project: Project<'Example'>): Promise<number> {
+        return 0; // TODO
+    }
 }
