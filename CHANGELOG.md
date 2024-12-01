@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/xeel-dev/create-xeel-cli-plugin/compare/v1.0.3...v1.1.0) (2024-12-01)
+
+
+### Features
+
+* upgrade to 1.1.0 to xeel CLI ([84ac560](https://github.com/xeel-dev/create-xeel-cli-plugin/commit/84ac560b1f88583e46a6117b925a52899c238957))
+
+
+### Bug Fixes
+
+* fix organization reference ([ac81f8b](https://github.com/xeel-dev/create-xeel-cli-plugin/commit/ac81f8b6e9c3a333e0ee512e3fc176134f3ff06a))
+
 ## [1.0.3](https://github.com/xeel-dev/create-xeel-cli-plugin/compare/v1.0.2...v1.0.3) (2024-11-25)
 
 
